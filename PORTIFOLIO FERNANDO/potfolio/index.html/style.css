@@ -1,0 +1,266 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root{
+--amarelo:#ffd500;
+--amarelo-hover:#ffea00;
+--preto:#111;
+--cinza:#f4f6f8;
+--sombra:0 10px 30px rgba(0,0,0,0.15);
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+background:var(--cinza);
+color:var(--preto);
+}
+
+
+/* NAVBAR */
+
+.navbar{
+background:white;
+padding:20px 0;
+position:sticky;
+top:0;
+z-index:1000;
+transition:0.3s;
+}
+
+.navbar.scrolled{
+padding:10px 0;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.navbar-brand{
+background:var(--amarelo);
+padding:6px 16px;
+border-radius:8px;
+font-weight:700;
+font-size:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link{
+color:black;
+font-weight:500;
+margin-right:20px;
+transition:0.3s;
+position:relative;
+}
+
+.nav-link::after{
+content:"";
+width:0%;
+height:2px;
+background:var(--amarelo);
+position:absolute;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+.nav-link:hover::after{
+width:100%;
+}
+
+.nav-link i{
+margin-right:6px;
+font-size:16px;
+}
+
+
+/* BOTÃO NAV */
+
+.botao-nav{
+background:var(--amarelo);
+padding:10px 28px;
+border-radius:40px;
+color:black;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+box-shadow:var(--sombra);
+}
+
+.botao-nav:hover{
+background:var(--amarelo-hover);
+transform:translateY(-2px);
+}
+
+
+/* HERO */
+
+.hero{
+background:linear-gradient(90deg,#e9edf2,var(--amarelo));
+padding:130px 0;
+}
+
+.hero h1{
+font-size:56px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#444;
+margin-bottom:30px;
+}
+
+.hero-img{
+max-height:420px;
+animation:flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.botao-principal{
+background:var(--amarelo);
+padding:14px 35px;
+border-radius:40px;
+color:black;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+box-shadow:var(--sombra);
+}
+
+.botao-principal:hover{
+background:var(--amarelo-hover);
+transform:translateY(-3px);
+}
+
+
+/* TITULOS */
+
+.titulo-secao{
+font-size:38px;
+font-weight:700;
+margin-bottom:20px;
+position:relative;
+}
+
+.titulo-secao::after{
+content:"";
+width:60px;
+height:4px;
+background:var(--amarelo);
+display:block;
+margin:10px auto;
+border-radius:2px;
+}
+
+.texto{
+max-width:700px;
+margin:auto;
+font-size:17px;
+color:#555;
+}
+
+
+/* PROJETOS */
+
+.projeto{
+border-radius:12px;
+transition:0.4s;
+margin-bottom:12px;
+box-shadow:var(--sombra);
+}
+
+.projeto:hover{
+transform:scale(1.06);
+}
+
+#projetos{
+padding-bottom:120px;
+}
+
+
+/* EQUIPE */
+
+.foto-equipe{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid black;
+transition:0.4s;
+margin-bottom:12px;
+box-shadow:var(--sombra);
+}
+
+.foto-equipe:hover{
+transform:scale(1.1);
+border-color:var(--amarelo);
+}
+
+
+/* CARDS DA EQUIPE */
+
+#equipe .col-md-4{
+margin-bottom:40px;
+}
+
+
+/* CONTATO */
+
+.contato{
+background:#111;
+color:white;
+padding:120px 0;
+margin-top:120px;
+}
+
+.contato h2{
+font-weight:700;
+margin-bottom:20px;
+}
+
+.contato p{
+opacity:0.8;
+}
+
+.contato-item{
+margin:8px 0;
+font-size:17px;
+}
+
+.contato-item i{
+color:var(--amarelo);
+margin-right:8px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero-img{
+margin-top:40px;
+}
+
+section{
+scroll-margin-top:100px;
+}
+}
